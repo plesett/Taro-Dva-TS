@@ -1,5 +1,5 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 // import Api from '../../utils/request'
 // import Tips from '../../utils/tips'
@@ -21,10 +21,10 @@ class Index extends Component<IndexProps, IndexState> {
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     // 加载完成执行一个 action 异步
     const { dispatch } = this.props;
-    dispatch({
+    await dispatch({
       type: 'index/getLists',
       payload: {
         title: '加载完成咯'
