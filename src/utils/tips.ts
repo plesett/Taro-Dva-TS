@@ -6,7 +6,9 @@ export default class Tips {
 	static isLoading = false
 
 	/**
-	 * 信息提示
+	 * 信息提示 延迟
+	 * @param title 标题
+	 * @param onHide 回调
 	 */
 	static toast(title: string, onHide?: () => void) {
 		Taro.showToast({
@@ -23,8 +25,10 @@ export default class Tips {
 		}
 	}
 	/**
- * 弹出加载提示
- */
+	 * 弹出加载提示
+	 * @param title 标题文本 
+	 * @param force 是否加载
+	 */
 	static loading(title = '加载中', force = false) {
 		if (this.isLoading && !force) {
 			return
@@ -60,6 +64,8 @@ export default class Tips {
 
 	/**
 	 * 弹出提示框
+	 * @param title 标题文本
+	 * @param duration 延迟消失时间
 	 */
 	static success(title, duration = 1500) {
 		Taro.showToast({

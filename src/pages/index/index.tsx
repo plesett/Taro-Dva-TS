@@ -5,6 +5,7 @@ import { connect } from '@tarojs/redux'
 // import Tips from '../../utils/tips'
 import { IndexProps, IndexState } from './index.interface'
 import './index.scss'
+import Tips from '../../utils/tips'
 // import {  } from '../../components'
 
 @connect(({ index }) => ({
